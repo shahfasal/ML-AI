@@ -4,6 +4,7 @@
 #### Each project is separated on a different branch under the master branch 
 
 ### Index
+* [Algorithms Used](#Algo)
 * [ Investment Analysis ](#Investment)
 * [ Lending Club ](#Lending)
 * [Gelly Auto](#Gelly)
@@ -11,6 +12,27 @@
 * [Telecom Churn](#Telecom)
 * [Chatbot](#Chatbot)
 
+<a name="Algo"></a>
+## Based on following Algorithms:    
+ * Linear Regression
+ * Logistic Regression 
+ * Naive Bayes
+ * Advance Regression 
+ * Decision Tree
+ * Random Forset
+ * Boosting
+ * K-Means
+ * PCA 
+ * Regex
+ * Tf-idf
+ * POS/CFG Tagger
+ * HMM/Viterbi model
+ * Word Embeddings 
+    * LSA 
+    * Word2Vec
+    * Glove
+    * Skip-Gram
+    
 <a name="Investment"></a>
 ## Investment Analysis
 The objective is to identify the best sectors, countries, and a suitable investment type for making investments. The overall strategy is to invest where others are investing, implying that the 'best' sectors and countries are the ones 'where most investors are investing'.
@@ -36,3 +58,5 @@ In this project, we analyse customer-level data of a leading telecom firm, build
 
 <a name="Chatbot"></a>
 ## Chatbot
+A conversational bot (chatbot) which can help users discover restaurants across several Indian cities.
+The main purpose of the bot is to help users discover restaurants quickly and efficiently and to provide a good restaurant discovery experience. The project brief provided to you is as follows.
