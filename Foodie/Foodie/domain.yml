@@ -1,0 +1,213 @@
+intents:
+- affirm
+- restaurant_search
+- greet
+- goodbye
+- stop
+- email
+- deny
+- gratitude
+entities:
+- cuisine
+- location
+- budget
+- emailId
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 0
+slots:
+  cuisine:
+    type: text
+  location:
+    type: categorical
+    values:
+      - Ahmedabad
+      - Bangalore
+      - Chennai
+      - Delhi
+      - Hyderabad
+      - Kolkata 
+      - Mumbai
+      - Pune
+      - Agra
+      - Ajmer
+      - Aligarh
+      - Amravati
+      - Amritsar
+      - Asansol
+      - Aurangabad
+      - Bareilly
+      - Belgaum
+      - Bhavnagar
+      - Bhiwandi
+      - Bhopal
+      - Bhubaneswar
+      - Bikaner
+      - Bilaspur
+      - Bokaro Steel City
+      - Chandigarh
+      - Coimbatore
+      - Cuttack
+      - Dehradun
+      - Dhanbad
+      - Bhilai
+      - Durgapur
+      - Erode
+      - Faridabad
+      - Firozabad
+      - Ghaziabad
+      - Gorakhpur
+      - Gulbarga
+      - Guntur
+      - Gwalior
+      - Gurgaon
+      - Guwahati
+      - Hamirpur
+      - Hubli–Dharwad
+      - Indore
+      - Jabalpur
+      - Jaipur
+      - Jalandhar
+      - Jammu
+      - Jamnagar
+      - Jamshedpur
+      - Jhansi
+      - Jodhpur
+      - Kakinada
+      - Kannur
+      - Kanpur
+      - Kochi
+      - Kolhapur
+      - Kollam
+      - Kozhikode
+      - Kurnool
+      - Ludhiana
+      - Lucknow
+      - Madurai
+      - Malappuram
+      - Mathura
+      - Goa
+      - Mangalore
+      - Meerut
+      - Moradabad
+      - Mysore
+      - Nagpur
+      - Nanded
+      - Nashik
+      - Nellore
+      - Noida
+      - Patna
+      - Pondicherry
+      - Purulia
+      - Prayagraj
+      - Raipur
+      - Rajkot
+      - Rajahmundry
+      - Ranchi
+      - Rourkela
+      - Salem
+      - Sangli
+      - Shimla
+      - Siliguri
+      - Solapur
+      - Srinagar
+      - Surat
+      - Thiruvananthapuram
+      - Thrissur
+      - Tiruchirappalli
+      - Tiruppur
+      - Ujjain
+      - Bijapur
+      - Vadodara
+      - Varanasi
+      - Vasai-Virar City
+      - Vijayawada
+      - Visakhapatnam
+      - Vellore
+      - Warangal
+  budget:
+    type: text
+  emailId:
+    type: text
+  emailbody:
+    type: text
+  location_verified:
+    type: bool
+  found_restaurants:
+    type: bool
+  cuisine_verified:
+    type: bool
+responses:
+  utter_ask_cuisine:
+  - buttons:
+    - payload: Chinese
+      title: Chinese
+    - payload: Italian
+      title: Italian
+    - payload: Mexican
+      title: Mexican
+    - payload: North Indian
+      title: North Indian
+    - payload: South Indian
+      title: South Indian
+    - payload: American
+      title: American
+    text: what kind of cuisine would you like?
+  utter_ask_budget:
+  - buttons:
+    - payload: Lesser than Rs.300
+      title: Lesser than Rs.300 (low)
+    - payload: Rs.300 to Rs.700
+      title: Rs.300 to 700 (mid)
+    - payload: More than Rs.700
+      title: More than 700 (high)
+    text : Select budget for two people
+  utter_ask_howcanhelp:
+  - text: how can I help you?
+  utter_ask_location:
+  - text: In what location?
+  utter_default:
+  - text: i cannot understand
+  utter_goodbye:
+  - text: goodbye :)
+  - text: Bye-bye
+  utter_greet:
+  - text: hey there! How may i help you
+  - text: Hi, How can I help you!
+  - text: Hey, How is it going. How May I help you Today
+  utter_ask_sendmail: 
+  - text: Do You need details of the top 10 restaurants on email? (yes/no) 
+  utter_get_email:
+  - text: Please provide your email id
+  utter_sent_email:
+  - text: We have emailed you the list of restaurants.
+  - text: Please check your mailbox, your list of restaurants is ready to view.
+  utter_useful_info:
+  - text: Hope the interaction was useful!!
+  - text: Hope you enjoyed interacting!!
+  utter_deny:
+  - text: Sorry, I am unable to find matching results. Please try again with different values.
+  utter_welcome:
+  - text: You are welcome :)
+  utter_regret:
+  - text: Sorry, I was unable to help!
+ 
+actions:
+- action_search_restaurants
+- action_mail_customer
+- action_check_location
+- action_check_cuisine
+- action_check_budget
+- action_check_continuity
+- utter_ask_cuisine
+- utter_ask_budget
+- utter_ask_howcanhelp
+- utter_ask_location
+- utter_default
+- utter_goodbye
+- utter_greet
+- utter_deny
+- utter_get_email
+- utter_sent_email
+- utter_welcome
+- utter_regret
